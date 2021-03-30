@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DCF</title>
+        <link rel="stylesheet" href="css/kids_ui.css" />
+
+        <!-- obfuscation -->
+        <script type="text/javascript" src="js/main_rel.js"></script>
+
+        <!-- not obfuscation -->
+        <script type="text/javascript" src="js/nav_util.js"></script>
+        <script type="text/javascript" src="js/Enum.js"></script>
+        <script type="text/javascript" src="js/Config.js"></script>
+        <script type="text/javascript" src="js/network.js"></script>
+        <script type="text/javascript" src="js/NavCoreProxy.js"></script>
+        <script type="text/javascript" src="js/HDSManager.js"></script>
+        <script type="text/javascript" src="js/Popup.js"></script>
+        <script type="text/javascript" src="js/kids_ui.js"></script>
+    </head>
+    <body>
+        <div id='layout'></div>
+        <div id='text_width'></div>
+        <div id='message_height'></div>
+    </body>
+    <script type="text/javascript">
+        acba("js:oipf_kt");
+        acba.require(["log:kids_ui", "js:kids_ui"],
+        function(log, kids_ui){
+            log.level = log.DEBUG;
+            kids_ui["KIDS_UI"].init();
+            log.debug("kids_ui module loading success.!!!");
+        }, function(log, hds_ui){
+            log.level = log.DEBUG;
+            log.debug("kids_ui module loading fail.!!!");
+        });
+    </script>
+</html>

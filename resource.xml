@@ -1,0 +1,21 @@
+<resources>
+	<resource>
+		<select name="RESOURCES_TARGET" default="resources_no">
+			<option value="resources_no">
+			</option>
+			<option value="resources">
+				<dir src="/css" dst="../../../apps/nav_webapp/apps/remotecontrol/css" />
+				<dir src="/images" dst="../../../apps/nav_webapp/apps/remotecontrol/images" />
+				<dir src="/js" dst="../../../apps/nav_webapp/apps/remotecontrol/js" />
+				<file src="/kids_ui.html" dst="../../../apps/nav_webapp/apps/remotecontrol/kids_ui.html" />
+			</option>
+			<option value="resources_ai_speaker">
+				<dir src="/css" dst="../../../apps/nav_webapp/apps/remotecontrol/css" />
+				<dir src="/images" dst="../../../apps/nav_webapp/apps/remotecontrol/images" />
+				<dir src="/js_ai_speaker" dst="../../../apps/nav_webapp/apps/remotecontrol/js_ai_speaker" />
+				<dir src="/prop" dst="../../../apps/nav_webapp/apps/remotecontrol/prop" />
+				<file src="/index.html" dst="../../../apps/nav_webapp/apps/remotecontrol/index.html" />
+			</option>
+		</select>
+	</resource>
+</resources>

@@ -1,0 +1,30 @@
+<rule>
+    <code name="remotecontrol" alt="Remote Control for KT">
+        <debug name="REMOTE_CONTROL">DEFAULT</debug>
+
+        <select name="AC_CF_USE_REMOTE_CONTROL" alt="Use RemoteControl" default="FALSE">
+            <option value="TRUE" alt="TRUE">
+                <cset name="AC_CF_USE_REMOTE_CONTROL"/>
+                <jset name="AC_CF_USE_REMOTE_CONTROL"/>
+                <jconfig name="AC_CF_USE_REMOTE_CONTROL" type="boolean">true</jconfig>
+
+                <jinit name="0971 REMOTE_CONTROL_ROP_INIT">com.alticast.rop.remotecontrol.RemoteControlInit.init</jinit>
+
+                <select name="AC_CF_REMOTE_CONTROL_AI_SPEAKER" alt="AI speaker function for kidscare" default="no">
+                    <option value="no" alt="NO">
+                        <jconfig name="AC_CF_REMOTE_CONTROL_AI_SPEAKER" type="boolean">false</jconfig>
+                        <rset name="RESOURCES_TARGET">resources</rset>
+                    </option>
+                    <option value="yes" alt="YES">
+                        <jconfig name="AC_CF_REMOTE_CONTROL_AI_SPEAKER" type="boolean">true</jconfig>
+                        <rset name="RESOURCES_TARGET">resources_ai_speaker</rset>
+                    </option>
+                </select>
+            </option>
+            <option value="FALSE" alt="FALSE">
+                <jconfig name="AC_CF_USE_REMOTE_CONTROL" type="boolean">false</jconfig>
+                <jconfig name="AC_CF_REMOTE_CONTROL_AI_SPEAKER" type="boolean">false</jconfig>
+            </option>
+        </select>
+    </code>
+</rule>

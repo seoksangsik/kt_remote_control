@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DCA</title>
+        <link rel="stylesheet" href="css/kids_ui.css" />
+
+        <!-- obfuscation -->
+        <script type="text/javascript" src="js/main_rel.js"></script>
+
+        <!-- not obfuscation -->
+        <script type="text/javascript" src="prop/properties_ai_speaker.js"></script>
+
+        <script type="text/javascript" src="js/nav_util.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/Enum.js"></script>
+        <script type="text/javascript" src="js/Config.js"></script>
+        <script type="text/javascript" src="js/network.js"></script>
+        <script type="text/javascript" src="js/NavCoreProxy.js"></script>
+        <script type="text/javascript" src="js/HDSManager.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/Kids.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/Util.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/VBOWrapper.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/KidsProxy.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/AMOCProxy.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/AppProxy.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/Popup.js"></script>
+        <script type="text/javascript" src="js_ai_speaker/KidsUI.js"></script>
+    </head>
+    <body>
+        <div id='layout'></div>
+        <div id='text_width'></div>
+        <div id='message_height'></div>
+    </body>
+    <script type="text/javascript">
+        var kidsUI = acba("js:KidsUI");
+        console.error('-kidsUI, obj=' + kidsUI);
+        kidsUI.init();
+    </script>
+</html>

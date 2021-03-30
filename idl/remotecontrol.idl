@@ -1,0 +1,15 @@
+package remotecontrol {
+    interface RemoteControlEvent {
+        async postMessage(Map<String, Variant> args, Nullable<String> aid);
+        async sendKeyword(Nullable<String> keyword);
+        async buyContents(Map<String, Variant> params);
+        async execute(Map<String, Variant> request);
+    }
+
+    interface RemoteControlInterface {
+        void setRemoteControlEvent(RemoteControlEvent event);
+        void notifyKeyword(bool result);
+        void notifyRemotePurchase(Nullable<String> result);
+        async notifyExecuteResult(Map<String, Variant> response);
+    }
+}
